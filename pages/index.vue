@@ -1,55 +1,478 @@
 <template lang="pug">
-   section.container
-     div
-       Logo
-       h1.title nuxt-pug
-       h2.subtitle My amazing Nuxt.js project
-       .links
-         a.button-green(href="https://nuxtjs.org/" target="_blank") Documentation
-         a.button--grey(href="https://github.com/nuxt/nuxt.js" target="_blank")  GitHub
+    main
+      .hero
+        h1: figure.catch: img(src="../assets/images/catch_white.svg", alt="")
+        figure.main: img(src="../assets/images/top_main.png", alt="")
+        figure.grad: img(src="../assets/images/top_main_grad.png", alt="")
+      .hero_mobile
+        .heading1: figure.catch: img(src="../assets/images/catch__white_mobile.svg", alt="")
+        figure.main: img(src="../assets/images/top_main_mobile@2x.png", alt="")
+        figure.grad: img(src="../assets/images/top_main_mobile_grad@2x.png", alt="")
+      .about
+        figure.noren: img(src="../assets/images/noren.png", alt="")
+        figure.tennai: img(src="../assets/images/tennai.png", alt="")
+        h2 台所から、<br>腕によりをかけて
+        p 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早25年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
+      .dish
+        .text_box
+        h2 家庭の味を、<br>美味しいお酒と一緒に
+        figure.kakuni: img(src="../assets/images/kakuni_top.png", alt="")
+        p 甘さが溶け出てお口にじゅわっと広がる、<br>たれが染み込んだ大根とお肉。<br>みずみずしくて脂がのった、<br>その日捌いた新鮮な刺身。<br>あてに一杯お酒をやれば、<br>自然とため息がこぼれ出ます。
+        nuxt-link(to="dish") 詳しく見る
+        figure.koyadofu: img(src="../assets/images/koyadofu_top.png", alt="")
+        figure.sashimi: img(src="../assets/images/sashimi_top.png", alt="")
+      .room
+        h2 おひとりさまでも、<br>大勢でもどうぞ
+        figure: img(src="../assets/images/table_top.png", alt="")
+        p カウンターやテーブル、個室と多様なお部屋をご用意しています。少し大きなお部屋もありますので、宴会などにどうぞ。
+        nuxt-link(to="room") 詳しく見る
+      Tel
+      Access
 </template>
 
-<script>
-export default {}
-</script>
-
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style scoped>
+main {
+  display: grid;
+  grid-template-rows: [hero] calc(var(--vh, 1vh) * 100) [gap1] 95px [about] auto [gap2] 246px [dish] auto [gap3] 158px [room] auto [tel_number] auto [access] auto [gap6] 160px;
+}
+@media (max-width: 767px) {
+  main {
+    grid-template-rows: [hero] calc(var(--vh, 1vh) * 100) [gap1] 24px [about] auto [gap2] 100px [dish] auto [gap3] 84px [room] auto [gap4] 100px [tel_number] auto [gap5] 100px [access] auto [gap6] 20px;
+  }
 }
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.hero {
+  grid-row: hero;
+  display: grid;
+  grid-template-columns: 20px 7.56fr 1.59fr 0.84fr 20px;
+  grid-template-rows: 20px 3.14fr 5.48fr 1.37fr 20px;
+  gap: 0px 0px;
+}
+@media (max-width: 500px) {
+  .hero {
+    display: none;
+  }
+}
+.hero h1 {
+  grid-area: 3/3/4/4;
+  z-index: 10;
+  align-self: end;
+  margin-bottom: 3vw;
+}
+.hero h1 figure {
+  max-width: 240px;
+  min-width: 120px;
+}
+.hero h1 figure img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.hero figure {
+  pointer-events: none;
+  -webkit-user-select: none;
+          user-select: none;
+  box-sizing: border-box;
+}
+.hero .main {
+  grid-area: 2/2/5/5;
+}
+.hero .main img {
+  object-fit: cover;
+  object-position: 55% 50%;
+  vertical-align: bottom;
+}
+.hero .grad {
+  grid-area: 2/2/5/5;
+}
+.hero::after {
+  grid-area: 4/3/5/4;
+  content: "";
+  bottom: 0;
+  justify-self: right;
+  width: 1px;
+  height: 120px;
+  justify-self: center;
+  margin-top: 50px;
+  margin-bottom: -150px;
+  background: #9d9d9d;
+  z-index: 10;
+  animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.hero_mobile {
+  grid-row: hero;
+  display: grid;
+  grid-template-columns: 20px 1fr 98px 26px 20px;
+  grid-template-rows: 20px 1fr 235px 60px 20px;
+  gap: 0px 0px;
+}
+@media (min-width: 501px) {
+  .hero_mobile {
+    display: none;
+  }
+}
+.hero_mobile .heading1 {
+  grid-area: 3/3/4/4;
+  z-index: 10;
+  align-self: end;
+  margin-bottom: 3vw;
+}
+.hero_mobile .heading1 figure img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+.hero_mobile figure {
+  pointer-events: none;
+  -webkit-user-select: none;
+          user-select: none;
+  box-sizing: border-box;
+}
+.hero_mobile .main {
+  grid-area: 2/2/5/5;
+}
+.hero_mobile .main img {
+  object-fit: cover;
+  object-position: 70% 50%;
+  vertical-align: bottom;
+}
+.hero_mobile .grad {
+  grid-area: 2/2/5/5;
+}
+.hero_mobile::after {
+  grid-area: 4/3/5/4;
+  content: "";
+  bottom: 0;
+  justify-self: right;
+  width: 1px;
+  height: 80px;
+  justify-self: center;
+  margin-top: 20px;
+  margin-bottom: -40px;
+  background: #9d9d9d;
+  z-index: 10;
+  animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
 }
 
-.links {
-  padding-top: 15px;
+@keyframes sdl {
+  0% {
+    transform: scale(1, 0);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: scale(1, 1);
+    transform-origin: 0 0;
+  }
+  50.1% {
+    transform: scale(1, 1);
+    transform-origin: 0 100%;
+  }
+  100% {
+    transform: scale(1, 0);
+    transform-origin: 0 100%;
+  }
+}
+.about {
+  grid-row: about;
+  display: grid;
+  grid-template-columns: var(--side) repeat(12, 1fr) var(--side);
+  grid-template-rows: 280px 57px 379px 65px 489px;
+  column-gap: 28px;
+}
+.about .noren {
+  grid-area: 1/9/3/14;
+}
+.about .noren img {
+  object-fit: cover;
+}
+.about .tennai {
+  grid-area: 2/2/6/8;
+}
+.about .tennai img {
+  object-fit: cover;
+}
+.about h2 {
+  grid-area: 3/9/4/14;
+  align-self: end;
+  justify-self: start;
+}
+.about p {
+  grid-area: 5/9/6/13;
+}
+.about::after {
+  content: "";
+  background-color: #F5EDDC;
+  grid-area: 1/1/6/12;
+  margin-top: -300px;
+  margin-bottom: 140px;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .about {
+    grid-template-columns: 24px repeat(12, 1fr) 24px;
+    grid-template-rows: 131px 52px 355px 35px 490px;
+    column-gap: 10px;
+  }
+  .about .noren {
+    grid-row: 1/2;
+    grid-column: 7/-2;
+    margin: 0 -10px;
+  }
+  .about .tennai {
+    grid-row: 3/4;
+    grid-column: 1/8;
+  }
+  .about h2 {
+    writing-mode: vertical-rl;
+    grid-row: 3/4;
+    grid-column: -2/-7;
+    justify-self: end;
+    align-self: start;
+    line-height: 1.6;
+    letter-spacing: 10px;
+    font-size: 32px;
+    margin-right: 15px;
+  }
+  .about p {
+    grid-row: 5/6;
+    grid-column: 3/-3;
+    margin: 0 -10px;
+  }
+  .about::after {
+    content: "";
+    background-color: #F5EDDC;
+    grid-row: 1/-1;
+    grid-column: 1/-3;
+    z-index: -1;
+    margin-right: 10px;
+    margin-bottom: 100px;
+  }
+}
+
+.dish {
+  grid-row: dish;
+  display: grid;
+  grid-template-columns: var(--side) repeat(12, 1fr) var(--side);
+  grid-template-rows: 217px 283px 170px 109px 89px 214px 167px;
+  column-gap: 28px;
+}
+.dish h2 {
+  grid-area: 1/2/2/8;
+}
+.dish p {
+  grid-area: 2/2/3/8;
+}
+.dish a {
+  grid-area: 3/2/4/6;
+  justify-self: end;
+  align-self: start;
+  color: #343434;
+  position: relative;
+}
+.dish a::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  margin: 10px;
+  background-color: #333;
+  vertical-align: middle;
+  transition: 0.4s;
+}
+.dish a::after {
+  content: "";
+  position: absolute;
+  left: 58px;
+  right: 0px;
+  bottom: -2px;
+  height: 1px;
+  background-color: #343434;
+  transition: 0.4s;
+}
+.dish a:hover::before {
+  width: 60px;
+}
+.dish a:hover::after {
+  left: 78px;
+  bottom: -5px;
+}
+.dish .kakuni {
+  grid-area: 1/8/4/15;
+}
+.dish .kakuni img {
+  object-fit: cover;
+  object-position: 60% 50%;
+}
+.dish .koyadofu {
+  grid-area: 5/4/7/8;
+}
+.dish .koyadofu img {
+  object-fit: cover;
+}
+.dish .sashimi {
+  grid-area: 6/9/8/14;
+}
+.dish .sashimi img {
+  object-fit: cover;
+}
+.dish::after {
+  content: "";
+  background-color: #F5EDDC;
+  grid-area: 1/3/7/15;
+  margin-top: 72px;
+  margin-bottom: -72px;
+  margin-left: -50px;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .dish {
+    grid-template-columns: 24px repeat(12, 1fr) 24px;
+    grid-template-rows: 100px 22px 248px 29px 256px 43px 26px 102px 47px 120px;
+    column-gap: 10px;
+  }
+  .dish h2 {
+    grid-column: 2/-2;
+    grid-row: 1/2;
+    margin: 0 -10px;
+  }
+  .dish .kakuni {
+    grid-column: 2/-2;
+    grid-row: 3/4;
+    margin: 0 -10px;
+  }
+  .dish p {
+    grid-column: 3/-2;
+    grid-row: 5/6;
+  }
+  .dish a {
+    grid-column: -2/-8;
+    grid-row: 6/7;
+    justify-self: end;
+    align-self: end;
+    font-size: 12px;
+  }
+  .dish a::before {
+    width: 30px;
+  }
+  .dish a::after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    right: 0px;
+    bottom: -1px;
+  }
+  .dish .koyadofu {
+    grid-column: 3/9;
+    grid-row: 8/9;
+    margin-left: -10px;
+  }
+  .dish .sashimi {
+    grid-column: 6/-2;
+    grid-row: 10/11;
+  }
+  .dish::after {
+    content: "";
+    background-color: #F5EDDC;
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    margin-top: 72px;
+    margin-bottom: 30px;
+    margin-left: -10px;
+    z-index: -1;
+  }
+}
+
+.room {
+  grid-row: room;
+  display: grid;
+  grid-template-columns: var(--side) repeat(12, 1fr) var(--side);
+  grid-template-rows: 128px 47px 194px 55px;
+  column-gap: 28px;
+}
+.room figure {
+  grid-row: 1/-1;
+  grid-column: 2/8;
+}
+.room figure img {
+  object-fit: cover;
+}
+.room h2 {
+  grid-row: 1/2;
+  grid-column: 9/14;
+}
+.room p {
+  grid-row: 3/4;
+  grid-column: 9/13;
+}
+.room a {
+  grid-row: 4/5;
+  grid-column: 9/13;
+  justify-self: end;
+  align-self: start;
+  color: #343434;
+  position: relative;
+}
+.room a::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  margin: 10px;
+  background-color: #333;
+  vertical-align: middle;
+  transition: 0.4s;
+}
+.room a::after {
+  content: "";
+  position: absolute;
+  left: 58px;
+  right: 0px;
+  bottom: -2px;
+  height: 1px;
+  background-color: #343434;
+  transition: 0.4s;
+}
+.room a:hover::before {
+  width: 60px;
+}
+.room a:hover::after {
+  left: 78px;
+  bottom: -5px;
+}
+@media (max-width: 767px) {
+  .room {
+    grid-template-columns: 24px repeat(12, 1fr) 24px;
+    grid-template-rows: 100px 22px 230px 28px 147px 39px;
+    column-gap: 10px;
+  }
+  .room h2 {
+    grid-row: 1/2;
+    grid-column: 2/-2;
+  }
+  .room figure {
+    grid-row: 3/4;
+    grid-column: 2/-2;
+  }
+  .room p {
+    grid-row: 5/6;
+    grid-column: 2/-2;
+  }
+  .room a {
+    grid-row: 6/7;
+    grid-column: 2/-2;
+    justify-self: end;
+    font-size: 12px;
+  }
+  .room a::before {
+    width: 30px;
+  }
+  .room a::after {
+    content: "";
+    position: absolute;
+    left: 50px;
+    right: 0px;
+    bottom: -1px;
+  }
 }
 </style>
