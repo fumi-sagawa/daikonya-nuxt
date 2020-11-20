@@ -65,7 +65,7 @@ div
   height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   background-color: #292320;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 /* ハンバーガーメニュー開封用 */
 .open{

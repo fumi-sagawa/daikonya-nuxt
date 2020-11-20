@@ -6,11 +6,22 @@
  .page-enter-active,.layout-enter-active {
    transition: opacity 1s;
 } */
+body {
+  animation: fadeIn 2s ease 0s 1 normal;
+}
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .layout-enter-active, .page-enter-active,
 .layout-leave-active, .page-leave-active {
-  transition: opacity 0.5s;
+  transition: opacity 0.4s;
 }
 .layout-enter, .page-enter,
 .layout-leave-active, .page-leave-active {

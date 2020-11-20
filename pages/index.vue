@@ -11,16 +11,15 @@
       .about
         figure.noren: img(src="../assets/images/noren.png", alt="")
         figure.tennai: img(src="../assets/images/tennai.png", alt="")
-        h2#about_text 台所から、<br>腕によりをかけて
-        p#about_text 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早25年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
+        h2#about_anime 台所から、<br>腕によりをかけて
+        p#about_anime 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早25年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
       .dish
-        .text_box
-        h2 家庭の味を、<br>美味しいお酒と一緒に
-        figure.kakuni: img(src="../assets/images/kakuni_top.png", alt="")
-        p 甘さが溶け出てお口にじゅわっと広がる、<br>たれが染み込んだ大根とお肉。<br>みずみずしくて脂がのった、<br>その日捌いた新鮮な刺身。<br>あてに一杯お酒をやれば、<br>自然とため息がこぼれ出ます。
-        nuxt-link(to="dish") 詳しく見る
-        figure.koyadofu: img(src="../assets/images/koyadofu_top.png", alt="")
-        figure.sashimi: img(src="../assets/images/sashimi_top.png", alt="")
+        h2#dish_anime01 家庭の味を、<br>美味しいお酒と一緒に
+        figure.kakuni#dish_anime01: img(src="../assets/images/kakuni_top.png", alt="")
+        p#dish_anime01 甘さが溶け出てお口にじゅわっと広がる、<br>たれが染み込んだ大根とお肉。<br>みずみずしくて脂がのった、<br>その日捌いた新鮮な刺身。<br>あてに一杯お酒をやれば、<br>自然とため息がこぼれ出ます。
+        nuxt-link#dish_anime01(to="dish") 詳しく見る
+        figure.koyadofu#dish_anime02: img(src="../assets/images/koyadofu_top.png", alt="")
+        figure.sashimi#dish_anime02: img(src="../assets/images/sashimi_top.png", alt="")
       .room
         h2 おひとりさまでも、<br>大勢でもどうぞ
         figure: img(src="../assets/images/table_top.png", alt="")
@@ -505,26 +504,10 @@ export default {
     this.about_noren()
     this.about_tennai()
     this.about_text()
+    this.dish_anime01()
+    this.dish_anime02()
   },
   methods:{
-    // logo_white(){
-    //   gsap.set(".white", {
-    //         autoAlpha:1
-    //       });
-    //   // gsap.set(".white", {
-    //   //   autoAlpha:1
-    //   // });
-    //   // gsap.to(".noren", { // 動かしたい要素は.a
-    //   //       // x: 500, // 右方向に500動く
-    //   //       x: -10,
-    //   //       autoAlpha: 1,
-    //   //       duration: 0.8, // アニメーションは1秒間
-    //   //       scrollTrigger: {
-    //   //         trigger: '.noren', // 要素".a"がビューポートに入ったときにアニメーション開始
-    //   //         start: '30% 80%', // アニメーション開始位置
-    //   //       }
-    //   //     })
-    // },
     about_noren(){
       gsap.set(".noren", {
             autoAlpha:0,
@@ -537,7 +520,7 @@ export default {
             duration: 0.8, // アニメーションは1秒間
             scrollTrigger: {
               trigger: '.noren', // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: '30% 80%', // アニメーション開始位置
+              start: '30% 90%', // アニメーション開始位置
             }
           })
     },
@@ -553,28 +536,60 @@ export default {
             duration: 0.8, // アニメーションは1秒間
             scrollTrigger: {
               trigger: '.tennai', // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: '30% 80%', // アニメーション開始位置
+              start: '30% 90%', // アニメーション開始位置
             }
           })
     },
     about_text(){
-      gsap.set("#about_text", {
+      gsap.set("#about_anime", {
             autoAlpha:0,
           });
-      gsap.to("#about_text", { // 動かしたい要素は.a
-            // x: 500, // 右方向に500動く
+      gsap.to("#about_anime", { // 動かしたい要素は.a
             autoAlpha: 1,
-            duration: 1, // アニメーションは1秒間
             scrollTrigger: {
-              trigger: "#about_text", // 要素".a"がビューポートに入ったときにアニメーション開始
+              trigger: "#about_anime", // 要素".a"がビューポートに入ったときにアニメーション開始
               start: 'top center', // アニメーション開始位置
             },
             stagger: {
               from: "start", //左側から
               amount: 0.4 // 0.8秒おきに
-            }
+            },
           })
     },
+    dish_anime01(){
+      gsap.set("#dish_anime01", {
+            autoAlpha:0,
+            y: 10
+          });
+      gsap.to("#dish_anime01", { // 動かしたい要素は.a
+            y:-10,
+            autoAlpha: 1,
+            duration: 1, // アニメーションは1秒間
+            scrollTrigger: {
+              trigger: "#dish_anime01", // 要素".a"がビューポートに入ったときにアニメーション開始
+              start: 'top 80%', // アニメーション開始位置
+            },
+          })
+    },
+    dish_anime02(){
+      gsap.set("#dish_anime02", {
+            autoAlpha:0,
+          });
+      gsap.to("#dish_anime02", { // 動かしたい要素は.a
+            // x: 500, // 右方向に500動く
+            autoAlpha: 1,
+            duration: 1, // アニメーションは1秒間
+            scrollTrigger: {
+              trigger: "#dish_anime02", // 要素".a"がビューポートに入ったときにアニメーション開始
+              start: 'top 70%', // アニメーション開始位置
+            },
+            stagger: {
+              from: "start", //左側から
+              amount: 0.4 // 0.8秒おきに
+            },
+          })
+    },
+
   }
 }
 </script>

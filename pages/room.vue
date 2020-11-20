@@ -93,7 +93,7 @@ main {
   margin-bottom: -50px;
   background: #2d2d2d;
   z-index: 10;
-  animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
+  animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
 }
 @media (max-width: 767px) {
   .hero::after {

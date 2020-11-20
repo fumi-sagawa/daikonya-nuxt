@@ -89,7 +89,7 @@ body {
   --side: calc( (100vw - 1550px) / 2 );
 }
 
-body {
+/* body {
   animation: fadeIn 2s ease 0s 1 normal;
 }
 
@@ -100,7 +100,7 @@ body {
   100% {
     opacity: 1;
   }
-}
+} */
 </style>
 
 <script>

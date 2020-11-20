@@ -5,12 +5,12 @@
       figure.main: img(src="../assets/images/oryori_main.png", alt="")
       figure.grad: img(src="../assets/images/oryori_main_grad@2x.png", alt="")
     section.story
-      h2.head01 ひとつひとつ丁寧に。
-      figure.img01: img(src="../assets/images/kakuni_making.png", alt="")
-      p.text01 醤油にみりん、お砂糖とお塩にすこしの隠し味を入れて。だいこん家では、店主みずからまいにち時間をかけて料理をお作りしています。美味しかったらぜひ感想をお聞かせください。
-      h2.head02 自慢のお酒
-      figure.img02: img(src="../assets/images/nihonsyu.png", alt="")
-      p.text02 福島をはじめとし、全国から20種類を超える日本酒を取り揃えました。ビールや焼酎はもちろん、定番のお酒も豊富にご用意しております。
+      h2.head01#story_anime01 ひとつひとつ丁寧に。
+      figure.img01#story_anime01: img(src="../assets/images/kakuni_making.png", alt="")
+      p.text01#story_anime01 醤油にみりん、お砂糖とお塩にすこしの隠し味を入れて。だいこん家では、店主みずからまいにち時間をかけて料理をお作りしています。美味しかったらぜひ感想をお聞かせください。
+      h2.head02#story_anime02 自慢のお酒
+      figure.img02#story_anime02: img(src="../assets/images/nihonsyu.png", alt="")
+      p.text02#story_anime02 福島をはじめとし、全国から20種類を超える日本酒を取り揃えました。ビールや焼酎はもちろん、定番のお酒も豊富にご用意しております。
     .course
       h2 コース
       p.description  宴会の際には、刺し身、煮物、煮魚がそろったお得なコースをどうぞ。
@@ -125,7 +125,7 @@ main {
   margin-bottom: -50px;
   background: #2d2d2d;
   z-index: 10;
-  animation: sdl 2s cubic-bezier(1, 0, 0, 1) infinite;
+  animation: sdl 2.5s cubic-bezier(1, 0, 0, 1) infinite;
 }
 @media (max-width: 767px) {
   .hero::after {
@@ -443,4 +443,50 @@ main {
 
 </style>
 
+<script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
+
+
+
+export default {
+  mounted() {
+    this.story_anime01()
+    this.story_anime02()
+  },
+  methods:{
+    story_anime01(){
+      gsap.set("#story_anime01", {
+            autoAlpha:0,
+          });
+      gsap.to("#story_anime01", { // 動かしたい要素は.a
+            autoAlpha: 1,
+            duration: 1, // アニメーションは1秒間
+            scrollTrigger: {
+              trigger: "#story_anime01", // 要素".a"がビューポートに入ったときにアニメーション開始
+              start: 'top 80%', // アニメーション開始位置
+              toggleActions: "restart none reverse none",
+            }
+          })
+    },
+    story_anime02(){
+      gsap.set("#story_anime02", {
+            autoAlpha:0,
+          });
+      gsap.to("#story_anime02", { // 動かしたい要素は.a
+            autoAlpha: 1,
+            duration: 1, // アニメーションは1秒間
+            scrollTrigger: {
+              trigger: "#story_anime02", // 要素".a"がビューポートに入ったときにアニメーション開始
+              start: 'top 80%', // アニメーション開始位置
+              toggleActions: "restart none reverse none",
+            }
+          })
+    },
+  }
+}
+</script>
 
