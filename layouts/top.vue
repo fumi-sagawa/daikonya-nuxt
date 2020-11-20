@@ -1,8 +1,11 @@
 <template lang="pug">
   div
-    HeaderItem
-    NavDesktop
-    NavMobile
+    TopHeaderItem
+    TopNavDesktop
+    TopNavMobile
+    //- HeaderItem
+    //- NavDesktop
+    //- NavMobile
     Nuxt
     FooterItem
 </template>
@@ -97,6 +100,8 @@ body {
 </style>
 
 <script>
+
+
   //Heightの設定
 if (process.client) {
   const setFillHeight = () => {

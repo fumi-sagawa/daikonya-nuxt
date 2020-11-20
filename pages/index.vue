@@ -1,6 +1,6 @@
 <template lang="pug">
     main
-      .hero
+      .hero_top
         h1: figure.catch: img(src="../assets/images/catch_white.svg", alt="")
         figure.main: img(src="../assets/images/top_main.png", alt="")
         figure.grad: img(src="../assets/images/top_main_grad.png", alt="")
@@ -11,8 +11,8 @@
       .about
         figure.noren: img(src="../assets/images/noren.png", alt="")
         figure.tennai: img(src="../assets/images/tennai.png", alt="")
-        h2 台所から、<br>腕によりをかけて
-        p 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早25年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
+        h2#about_text 台所から、<br>腕によりをかけて
+        p#about_text 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早25年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
       .dish
         .text_box
         h2 家庭の味を、<br>美味しいお酒と一緒に
@@ -41,7 +41,7 @@ main {
   }
 }
 
-.hero {
+.hero_top {
   grid-row: hero;
   display: grid;
   grid-template-columns: 20px 7.56fr 1.59fr 0.84fr 20px;
@@ -49,43 +49,43 @@ main {
   gap: 0px 0px;
 }
 @media (max-width: 500px) {
-  .hero {
+  .hero_top {
     display: none;
   }
 }
-.hero h1 {
+.hero_top h1 {
   grid-area: 3/3/4/4;
   z-index: 10;
   align-self: end;
   margin-bottom: 3vw;
 }
-.hero h1 figure {
+.hero_top h1 figure {
   max-width: 240px;
   min-width: 120px;
 }
-.hero h1 figure img {
+.hero_top h1 figure img {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
-.hero figure {
+.hero_top figure {
   pointer-events: none;
   -webkit-user-select: none;
           user-select: none;
   box-sizing: border-box;
 }
-.hero .main {
+.hero_top .main {
   grid-area: 2/2/5/5;
 }
-.hero .main img {
+.hero_top .main img {
   object-fit: cover;
   object-position: 55% 50%;
   vertical-align: bottom;
 }
-.hero .grad {
+.hero_top .grad {
   grid-area: 2/2/5/5;
 }
-.hero::after {
+.hero_top::after {
   grid-area: 4/3/5/4;
   content: "";
   bottom: 0;
@@ -475,4 +475,106 @@ main {
     bottom: -1px;
   }
 }
+
+
+/* メニューのトグル用 */
+/* .target{
+  transition: 0.8s;
+  opacity: 0%;
+}
+.visible_invisible{
+  opacity: 100%;
+} */
+
+
 </style>
+
+<script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
+
+
+
+export default {
+  layout: 'top',
+  mounted() {
+    // this.logo_white()
+    this.about_noren()
+    this.about_tennai()
+    this.about_text()
+  },
+  methods:{
+    // logo_white(){
+    //   gsap.set(".white", {
+    //         autoAlpha:1
+    //       });
+    //   // gsap.set(".white", {
+    //   //   autoAlpha:1
+    //   // });
+    //   // gsap.to(".noren", { // 動かしたい要素は.a
+    //   //       // x: 500, // 右方向に500動く
+    //   //       x: -10,
+    //   //       autoAlpha: 1,
+    //   //       duration: 0.8, // アニメーションは1秒間
+    //   //       scrollTrigger: {
+    //   //         trigger: '.noren', // 要素".a"がビューポートに入ったときにアニメーション開始
+    //   //         start: '30% 80%', // アニメーション開始位置
+    //   //       }
+    //   //     })
+    // },
+    about_noren(){
+      gsap.set(".noren", {
+            autoAlpha:0,
+            x: 10
+          });
+      gsap.to(".noren", { // 動かしたい要素は.a
+            // x: 500, // 右方向に500動く
+            x: -10,
+            autoAlpha: 1,
+            duration: 0.8, // アニメーションは1秒間
+            scrollTrigger: {
+              trigger: '.noren', // 要素".a"がビューポートに入ったときにアニメーション開始
+              start: '30% 80%', // アニメーション開始位置
+            }
+          })
+    },
+    about_tennai(){
+      gsap.set(".tennai", {
+            autoAlpha:0,
+            y: 10
+          });
+      gsap.to(".tennai", { // 動かしたい要素は.a
+            // x: 500, // 右方向に500動く
+            y: -10,
+            autoAlpha: 1,
+            duration: 0.8, // アニメーションは1秒間
+            scrollTrigger: {
+              trigger: '.tennai', // 要素".a"がビューポートに入ったときにアニメーション開始
+              start: '30% 80%', // アニメーション開始位置
+            }
+          })
+    },
+    about_text(){
+      gsap.set("#about_text", {
+            autoAlpha:0,
+          });
+      gsap.to("#about_text", { // 動かしたい要素は.a
+            // x: 500, // 右方向に500動く
+            autoAlpha: 1,
+            duration: 1, // アニメーションは1秒間
+            scrollTrigger: {
+              trigger: "#about_text", // 要素".a"がビューポートに入ったときにアニメーション開始
+              start: 'top center', // アニメーション開始位置
+            },
+            stagger: {
+              from: "start", //左側から
+              amount: 0.4 // 0.8秒おきに
+            }
+          })
+    },
+  }
+}
+</script>

@@ -11,6 +11,8 @@
 </template>
 
 <style scoped>
+
+
 .desktop_navigation {
   z-index: 100;
   position: fixed;
@@ -19,6 +21,7 @@
   display: grid;
   grid-auto-flow: column;
   gap: 40px;
+  --nav_color_black: white;
 }
 .desktop_navigation ul {
   display: grid;
@@ -28,7 +31,7 @@
 }
 .desktop_navigation ul:nth-child(2) {
   border-width: 1px;
-  border-color: #343434;
+  border-color: var(--nav_color_black);
   border-left-style: solid;
 }
 .desktop_navigation ul li {
@@ -36,10 +39,10 @@
   border-bottom: solid 1px rgba(0, 0, 0, 0);
 }
 .desktop_navigation ul li:hover {
-  border-bottom: solid 1px #343434;
+  border-bottom: solid 1px var(--nav_color_black);
 }
 .desktop_navigation ul li a {
-  color: #343434;
+  color: var(--nav_color_black);
 }
 @media (max-width: 767px) {
   .desktop_navigation {
@@ -47,7 +50,6 @@
   }
 }
 </style>
-
 
 <script>
 import { gsap } from 'gsap'
@@ -59,9 +61,24 @@ if (process.client) {
 export default {
   layout: 'top',
   mounted() {
+    this.turn_nav_color()
     this.invisible()
   },
   methods:{
+    turn_nav_color(){
+      gsap.to(".desktop_navigation", { // 動かしたい要素は.a
+            // x: 500, // 右方向に500動く
+            "--nav_color_black": "#343434",
+            duration: 0.4, // アニメーションは1秒間
+            scrollTrigger: {
+              trigger: ".hero_top", // 要素".a"がビューポートに入ったときにアニメーション開始
+              start: 'bottom-=20px top', // アニメーション開始位置
+              end:  'bottom-=20px top',
+              toggleActions: "play none reverse none",
+              // markers: true
+            }
+          })
+    },
     invisible(){
       gsap.to(".desktop_navigation", { // 動かしたい要素は.a
             // x: 500, // 右方向に500動く

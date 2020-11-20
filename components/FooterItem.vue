@@ -20,6 +20,11 @@ div
 </template>
 
 <style style scoped>
+
+ ul{
+    padding-left: 0;
+ }
+
 footer {
   display: grid;
   width: 100vw;
