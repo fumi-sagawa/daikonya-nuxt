@@ -1,2 +1,3 @@
 User-agent: *
-Allow: /
+Disallow : 
+Sitemap : https://daikon-ya.net/sitemap.xml
