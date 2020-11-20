@@ -1,24 +1,24 @@
 <template lang="pug">
 div
   //-モバイルナビゲーション
-  button.mobile_menu_button_humbergur
+  button.mobile_menu_button_humbergur(v-on:click="flag = false")
     span 
     span 
     span 
 
-  .mobile_navigation
+  .mobile_navigation(v-bind:class="{open:flag}")
     .logo_area
       img(src="../assets/images/logo.png", alt="")
       img.logo_type(src="../assets/images/logotype_white.svg", alt="")
-    button.mobile_menu_button
+    button.mobile_menu_button#menu-close(v-on:click="flag = true")
       span.line1 
       span.line2 
-    .information_area
+    .information_area(v-on:click="flag = true")
       .drawer_navigation
         ul 
           li: nuxt-link(to="/") ホーム
-          li: nuxt-link(to="dish") お料理
-          li: nuxt-link(to="room") お部屋
+          li: nuxt-link(to="dish" ) お料理
+          li: nuxt-link(to="room" ) お部屋
       .drawer_information
         .tel
           p.caption 電話番号
@@ -47,7 +47,6 @@ div
 }
 .mobile_menu_button_humbergur span {
   background-color: #343434;
-  background-color: #ffffff;
   display: block;
   width: 35px;
   height: 1px;
@@ -60,12 +59,18 @@ div
 }
 
 .mobile_navigation {
-  visibility: hidden;
+  /* visibility: hidden; */
   position: fixed;
   z-index: 100;
   height: calc(var(--vh, 1vh) * 100);
   width: 100vw;
   background-color: #292320;
+  transition: 0.3s;
+}
+/* ハンバーガーメニュー開封用 */
+.open{
+  visibility: hidden;
+  opacity: 0%;
 }
 
 ul{
@@ -182,3 +187,14 @@ ul{
   font-family: sans-serif;
 }
 </style>
+
+
+<script>
+export default {
+  data() {
+    return {
+      flag: true,
+    }
+  },
+}
+</script>

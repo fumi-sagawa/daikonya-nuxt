@@ -1,0 +1,18 @@
+/* 
+.page-enter, .layout-enter {
+   opacity: 0;
+}
+
+ .page-enter-active,.layout-enter-active {
+   transition: opacity 1s;
+} */
+
+
+.layout-enter-active, .page-enter-active,
+.layout-leave-active, .page-leave-active {
+  transition: opacity 0.5s;
+}
+.layout-enter, .page-enter,
+.layout-leave-active, .page-leave-active {
+  opacity: 0;
+}

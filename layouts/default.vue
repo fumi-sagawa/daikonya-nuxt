@@ -13,6 +13,7 @@ html {
   overflow-x: scroll;
 }
 
+
 body {
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
@@ -27,6 +28,10 @@ img {
   width: 100%;
   height: 100%;
   vertical-align: bottom;
+}
+
+button:focus {
+	outline:0;
 }
 
 body {
@@ -122,6 +127,7 @@ export default {
   mounted() {
     try {Typekit.load({async: true});} catch (e) {}
   }
+  
 }
 
 </script>

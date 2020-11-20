@@ -32,6 +32,10 @@ img {
   vertical-align: bottom;
 }
 
+button:focus {
+	outline:0;
+}
+
 body {
   box-sizing: border-box;
   font-family: ten-mincho-text, serif;
@@ -126,7 +130,11 @@ if (process.client) {
 export default {
   mounted() {
     try {Typekit.load({async: true});} catch (e) {}
+  },
+  data() {
+    return {
+      flag: true,
+    }
   }
 }
-
 </script>
