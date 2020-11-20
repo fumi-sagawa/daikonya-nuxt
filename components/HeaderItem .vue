@@ -43,32 +43,32 @@ header a .logo_type {
 
 
 <script>
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-if (process.client) {
-  gsap.registerPlugin(ScrollTrigger)
-}
+// import { gsap } from 'gsap'
+// import { ScrollTrigger } from 'gsap/ScrollTrigger'
+// if (process.client) {
+//   gsap.registerPlugin(ScrollTrigger)
+// }
 
-export default {
-  layout: 'top',
-  mounted() {
-    this.invisible()
-  },
-  methods:{
-    invisible(){
-      gsap.to(".logo_area", { // 動かしたい要素は.a
-            // x: 500, // 右方向に500動く
-            duration: 0.4, // アニメーションは1秒間
-            autoAlpha: 0,
-            scrollTrigger: {
-              trigger: "footer", // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: 'top bottom', // アニメーション開始位置
-              end:  'top bottom',
-              toggleActions: "play none reverse none",
-              // markers: true
-            }
-          })
-    }
-  }
-}
+// export default {
+//   layout: 'top',
+//   mounted() {
+//     this.invisible()
+//   },
+//   methods:{
+//     invisible(){
+//       gsap.to(".logo_area", { // 動かしたい要素は.a
+//             // x: 500, // 右方向に500動く
+//             duration: 0.4, // アニメーションは1秒間
+//             autoAlpha: 0,
+//             scrollTrigger: {
+//               trigger: "footer", // 要素".a"がビューポートに入ったときにアニメーション開始
+//               start: 'top bottom', // アニメーション開始位置
+//               end:  'top bottom',
+//               toggleActions: "play none reverse none",
+//               // markers: true
+//             }
+//           })
+//     }
+//   }
+// }
 </script>

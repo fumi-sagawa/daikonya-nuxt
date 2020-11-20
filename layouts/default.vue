@@ -9,8 +9,8 @@
 
 <style>
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  /* scroll-behavior: smooth; */
+  overflow-x: scroll;
 }
 
 body {

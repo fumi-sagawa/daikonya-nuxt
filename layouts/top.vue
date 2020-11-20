@@ -12,7 +12,7 @@
 
 <style>
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   overflow-x: hidden;
 }
 

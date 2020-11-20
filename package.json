@@ -14,7 +14,8 @@
     "nuxt": "^2.14.6",
     "pug": "^3.0.0",
     "pug-loader": "^2.4.0",
-    "pug-plain-loader": "^1.0.0"
+    "pug-plain-loader": "^1.0.0",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "node-sass": "^5.0.0",

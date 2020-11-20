@@ -57,7 +57,7 @@ export default {
   layout: 'top',
   mounted() {
     this.turn_logo_color()
-    this.invisible()
+    // this.invisible()
   },
   methods:{
     turn_logo_color(){
@@ -77,20 +77,20 @@ export default {
             }
           })
     },
-    invisible(){
-      gsap.to(".logo_area", { // 動かしたい要素は.a
-            // x: 500, // 右方向に500動く
-            duration: 0.4, // アニメーションは1秒間
-            autoAlpha: 0,
-            scrollTrigger: {
-              trigger: "footer", // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: 'top bottom', // アニメーション開始位置
-              end:  'top bottom',
-              toggleActions: "play none reverse none",
-              // markers: true
-            }
-          })
-    }
+    // invisible(){
+    //   gsap.to(".logo_area", { // 動かしたい要素は.a
+    //         // x: 500, // 右方向に500動く
+    //         duration: 0.4, // アニメーションは1秒間
+    //         autoAlpha: 0,
+    //         scrollTrigger: {
+    //           trigger: "footer", // 要素".a"がビューポートに入ったときにアニメーション開始
+    //           start: 'top bottom', // アニメーション開始位置
+    //           end:  'top bottom',
+    //           toggleActions: "play none reverse none",
+    //           // markers: true
+    //         }
+    //       })
+    // }
   }
 }
 </script>

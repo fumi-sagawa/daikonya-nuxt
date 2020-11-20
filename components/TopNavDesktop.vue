@@ -1,19 +1,19 @@
 <template lang="pug">
   //- デスクトップナビゲーション
-  nav.desktop_navigation
+  nav.top_desktop_navigation
     ul 
       li: nuxt-link(to="/") ホーム
       li: nuxt-link(to="dish") お料理
       li: nuxt-link(to="room") お部屋
     ul
-      li: nuxt-link(to="#access") アクセス
-      li: nuxt-link(to="#tel_number") ご予約
+      li: nuxt-link(v-scroll-to="'#access'" to="#") アクセス
+      li: nuxt-link(v-scroll-to="'#tel_number'" to="#") ご予約
 </template>
 
 <style scoped>
 
 
-.desktop_navigation {
+.top_desktop_navigation {
   z-index: 100;
   position: fixed;
   top: 76px;
@@ -23,29 +23,29 @@
   gap: 40px;
   --nav_color_black: white;
 }
-.desktop_navigation ul {
+.top_desktop_navigation ul {
   display: grid;
   grid-auto-flow: column;
   list-style-type: none;
   gap: 40px;
 }
-.desktop_navigation ul:nth-child(2) {
+.top_desktop_navigation ul:nth-child(2) {
   border-width: 1px;
   border-color: var(--nav_color_black);
   border-left-style: solid;
 }
-.desktop_navigation ul li {
+.top_desktop_navigation ul li {
   transition: 0.4s;
   border-bottom: solid 1px rgba(0, 0, 0, 0);
 }
-.desktop_navigation ul li:hover {
+.top_desktop_navigation ul li:hover {
   border-bottom: solid 1px var(--nav_color_black);
 }
-.desktop_navigation ul li a {
+.top_desktop_navigation ul li a {
   color: var(--nav_color_black);
 }
 @media (max-width: 767px) {
-  .desktop_navigation {
+  .top_desktop_navigation {
     display: none;
   }
 }
@@ -62,11 +62,11 @@ export default {
   layout: 'top',
   mounted() {
     this.turn_nav_color()
-    this.invisible()
+    // this.invisible()
   },
   methods:{
     turn_nav_color(){
-      gsap.to(".desktop_navigation", { // 動かしたい要素は.a
+      gsap.to(".top_desktop_navigation", { // 動かしたい要素は.a
             // x: 500, // 右方向に500動く
             "--nav_color_black": "#343434",
             duration: 0.4, // アニメーションは1秒間
@@ -79,20 +79,20 @@ export default {
             }
           })
     },
-    invisible(){
-      gsap.to(".desktop_navigation", { // 動かしたい要素は.a
-            // x: 500, // 右方向に500動く
-            duration: 0.4, // アニメーションは1秒間
-            autoAlpha: 0,
-            scrollTrigger: {
-              trigger: "footer", // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: 'top bottom', // アニメーション開始位置
-              end:  'top bottom',
-              toggleActions: "play none reverse none",
-              // markers: true
-            }
-          })
-    },
+    // invisible(){
+    //   gsap.to(".top_desktop_navigation", { // 動かしたい要素は.a
+    //         // x: 500, // 右方向に500動く
+    //         duration: 0.4, // アニメーションは1秒間
+    //         autoAlpha: 0,
+    //         scrollTrigger: {
+    //           trigger: "footer", // 要素".a"がビューポートに入ったときにアニメーション開始
+    //           start: 'top bottom', // アニメーション開始位置
+    //           end:  'top bottom',
+    //           toggleActions: "play none reverse none",
+    //           // markers: true
+    //         }
+    //       })
+    // },
   }
 }
 </script>
