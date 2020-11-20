@@ -46,7 +46,7 @@
 .tel_number .number:hover {
   border-bottom: 10px double #988C79;
 }
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .tel_number .number {
     font-size: calc(39px + 43 * (100vw - 768px) / 432);
   }

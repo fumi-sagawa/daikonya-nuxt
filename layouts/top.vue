@@ -54,7 +54,7 @@ h2 {
   letter-spacing: 0.05em;
   line-height: 1.48;
 }
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   h2 {
     font-size: calc(28px + 20 * (100vw - 768px) / 432);
   }
@@ -73,7 +73,7 @@ p {
   letter-spacing: 0.1em;
   line-height: 2.3;
 }
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   p {
     font-size: calc(16px + 4 * (100vw - 768px) / 432);
   }

@@ -41,7 +41,7 @@
 .desktop_navigation ul li a {
   color: #343434;
 }
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .desktop_navigation {
     display: none;
   }

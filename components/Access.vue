@@ -83,7 +83,7 @@
 .access iframe:hover {
   filter: grayscale(0%);
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .access {
     grid-template-columns: 24px repeat(12, 1fr) 24px;
     grid-template-rows: 300px 300px;

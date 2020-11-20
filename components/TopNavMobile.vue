@@ -53,7 +53,7 @@ div
   height: 1px;
   margin: 6px 0;
 }
-@media (min-width: 767px) {
+@media (min-width: 769px) {
   .mobile_menu_button_humbergur {
     display: none;
   }
@@ -81,7 +81,7 @@ ul{
 .mobile_navigation img {
   height: auto;
 }
-@media (min-width: 767px) {
+@media (min-width: 769px) {
   .mobile_navigation {
     display: none;
   }

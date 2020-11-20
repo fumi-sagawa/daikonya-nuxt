@@ -44,7 +44,7 @@
 .top_desktop_navigation ul li a {
   color: var(--nav_color_black);
 }
-@media (max-width: 767px) {
+@media (max-width: 769px) {
   .top_desktop_navigation {
     display: none;
   }

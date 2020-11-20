@@ -46,7 +46,7 @@ footer .logo {
   column-gap: 20px;
   align-items: center;
 }
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   footer .logo {
     grid-template-columns: 70px 150px;
   }
@@ -71,7 +71,7 @@ footer ul li a {
 footer ul li a:hover {
   border-bottom: solid 1px white;
 }
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   footer ul li {
     font-size: calc(16px + 7 * (100vw - 768px) / 432);
   }
@@ -85,7 +85,7 @@ footer .information p.caption {
   color: #635d55;
   font-size: 24px;
 }
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   footer .information p.caption {
     font-size: calc(14px + 10 * (100vw - 768px) / 432);
   }
@@ -95,7 +95,7 @@ footer .information p.main {
   font-size: 34px;
   color: white;
 }
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   footer .information p.main {
     font-size: calc(18px + 14 * (100vw - 768px) / 432);
   }
@@ -104,7 +104,7 @@ footer .information p.sub {
   line-height: 1;
   font-size: 22px;
 }
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   footer .information p.sub {
     font-size: calc(14px + 8 * (100vw - 768px) / 432);
   }
