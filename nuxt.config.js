@@ -37,7 +37,12 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
+    '@aceforth/nuxt-optimized-images'
   ],
+  optimizedImages: {
+    optimizeImages: true,
+    imagesName: ({ isDev }) => isDev ? '[path][name][hash:optimized].[ext]' : 'img/[name].[ext]'
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
