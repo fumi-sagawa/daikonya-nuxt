@@ -2,10 +2,7 @@
     main
       .hero_top
         h1: figure.catch: img(src="../assets/images/catch_white.svg", alt="")
-        figure.main
-          img(src="../assets/images/top_main.jpg", alt="")
-        figure.main
-          img(:src="require('../assets/images/top_main.jpg?inline')")
+        figure.main: img(src="../assets/images/top_main.jpg", alt="")
         figure.grad: img(src="../assets/images/top_main_grad.png", alt="")
       .hero_mobile
         .heading1: figure.catch: img(src="../assets/images/catch__white_mobile.svg", alt="")

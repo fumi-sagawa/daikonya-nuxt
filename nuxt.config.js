@@ -6,12 +6,20 @@ export default {
   head: {
     title: '家庭の味 だいこん家 | いわき駅前の居酒屋',
     htmlAttrs: {
-      lang: 'ja'
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#'
     },
+    titleTemplate: '%s - 家庭の味 だいこん家 | いわき駅前の居酒屋',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '福島いわき駅から徒歩５分。家庭料理を中心に日本酒や焼酎など、おいしいお酒を提供しております。身も心もほっとする温かい時間をどうぞ' }
+      { hid: 'description', name: 'description', content: '福島いわき駅から徒歩５分。家庭料理を中心に日本酒や焼酎など、おいしいお酒を提供しております。身も心もほっとする温かい時間をどうぞ' },
+      { hid: 'og:site_name', property: 'og:site_name', content: '家庭の味 だいこん家 | いわき駅前の居酒屋' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://daikon-ya.net' },
+      { hid: 'og:title', property: 'og:title', content: '家庭の味 だいこん家 | いわき駅前の居酒屋' },
+      { hid: 'og:description', property: 'og:description', content: '福島いわき駅から徒歩５分。家庭料理を中心に日本酒や焼酎など、おいしいお酒を提供しております。身も心もほっとする温かい時間をどうぞ' },
+      { hid: 'og:image', property: 'og:image', content: 'https://daikon-ya.net/_nuxt/img/top_main.2228400.jpg' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
