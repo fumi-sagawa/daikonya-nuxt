@@ -8,35 +8,35 @@
           <source :srcSet="require('../assets/images/top_main.png?inline')" type="image/webp" />
           <source :srcSet="require('../assets/images/top_main.png?webp')" type="image/webp" />
           <source :srcSet="require('../assets/images/top_main.png')" type="image/jpeg" />
-          <img :src="require('../assets/images/top_main.png')" />
+          //- <img :src="require('../assets/images/top_main.png')" />
         figure.grad
           <source :srcSet="require('../assets/images/top_main_grad.png?inline')" type="image/webp" />
           <source :srcSet="require('../assets/images/top_main_grad.png?webp')" type="image/webp" />
           <source :srcSet="require('../assets/images/top_main_grad.png')" type="image/jpeg" />
-          <img :src="require('../assets/images/top_main_grad.png')" />
+          //- <img :src="require('../assets/images/top_main_grad.png')" />
       .hero_mobile
         .heading1: figure.catch: img(src="../assets/images/catch__white_mobile.svg", alt="")
         figure.main
           <source :srcSet="require('../assets/images/top_main_mobile@2x.png?inline')" type="image/webp" />
           <source :srcSet="require('../assets/images/top_main_mobile@2x.png?webp')" type="image/webp" />
           <source :srcSet="require('../assets/images/top_main_mobile@2x.png')" type="image/jpeg" />
-          <img :src="require('../assets/images/top_main_mobile@2x.png')" />
+          //- <img :src="require('../assets/images/top_main_mobile@2x.png')" />
         figure.grad
           <source :srcSet="require('../assets/images/top_main_mobile_grad@2x.png?inline')" type="image/webp" />
           <source :srcSet="require('../assets/images/top_main_mobile_grad@2x.png?webp')" type="image/webp" />
           <source :srcSet="require('../assets/images/top_main_mobile_grad@2x.png')" type="image/jpeg" />
-          <img :src="require('../assets/images/top_main_mobile_grad@2x.png')" />
+          //- <img :src="require('../assets/images/top_main_mobile_grad@2x.png')" />
       .about
         figure.noren
           <source :srcSet="require('../assets/images/noren.png?inline')" type="image/webp" />
           <source :srcSet="require('../assets/images/noren.png?webp')" type="image/webp" />
           <source :srcSet="require('../assets/images/noren.png')" type="image/jpeg" />
-          <img :src="require('../assets/images/noren.png')" />
+          //- <img :src="require('../assets/images/noren.png')" />
         figure.tennai
           <source :srcSet="require('../assets/images/tennai.png?inline')" type="image/webp" />
           <source :srcSet="require('../assets/images/tennai.png?webp')" type="image/webp" />
           <source :srcSet="require('../assets/images/tennai.png')" type="image/jpeg" />
-          <img :src="require('../assets/images/tennai.png')" />
+          //- <img :src="require('../assets/images/tennai.png')" />
         h2#about_anime 台所から、<br>腕によりをかけて
         p#about_anime 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早25年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
       .dish
@@ -45,19 +45,19 @@
           <source :srcSet="require('../assets/images/kakuni_top.png?inline')" type="image/webp" />
           <source :srcSet="require('../assets/images/kakuni_top.png?webp')" type="image/webp" />
           <source :srcSet="require('../assets/images/kakuni_top.png')" type="image/jpeg" />
-          <img :src="require('../assets/images/kakuni_top.png')" />
+          //- <img :src="require('../assets/images/kakuni_top.png')" />
         p#dish_anime01 甘さが溶け出てお口にじゅわっと広がる、<br>たれが染み込んだ大根とお肉。<br>みずみずしくて脂がのった、<br>その日捌いた新鮮な刺身。<br>あてに一杯お酒をやれば、<br>自然とため息がこぼれ出ます。
         nuxt-link#dish_anime01(to="dish") 詳しく見る
         figure.koyadofu#dish_anime02
           <source :srcSet="require('../assets/images/koyadofu_top.png?inline')" type="image/webp" />
           <source :srcSet="require('../assets/images/koyadofu_top.png?webp')" type="image/webp" />
           <source :srcSet="require('../assets/images/koyadofu_top.png')" type="image/jpeg" />
-          <img :src="require('../assets/images/koyadofu_top.png')" />
+          //- <img :src="require('../assets/images/koyadofu_top.png')" />
         figure.sashimi#dish_anime02
           <source :srcSet="require('../assets/images/sashimi_top.png?inline')" type="image/webp" />
           <source :srcSet="require('../assets/images/sashimi_top.png?webp')" type="image/webp" />
           <source :srcSet="require('../assets/images/sashimi_top.png')" type="image/jpeg" />
-          <img :src="require('../assets/images/sashimi_top.png')" />
+          //- <img :src="require('../assets/images/sashimi_top.png')" />
       .room
         h2 おひとりさまでも、<br>大勢でもどうぞ
         figure: img(src="../assets/images/table_top.png", alt="")
