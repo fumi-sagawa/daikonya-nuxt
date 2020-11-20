@@ -2,20 +2,20 @@
   main
     .hero
       h1 お部屋
-      figure.main: img(src="../assets/images/oheya_main.png", alt="")
-      figure.grad: img(src="../assets/images/oheya_main_grad@2x.png", alt="")
+      figure.main: img(src="../assets/images/oheya_main.jpg", alt="")
+      figure.grad: img(src="../assets/images/oheya_main_grad.png", alt="")
     .counter
       h2 カウンター
-      figure.image01: img(src="../assets/images/counter.png", alt="")
+      figure.image01: img(src="../assets/images/counter.jpg", alt="")
       p お一人、またはお二人で来られた際にどうぞ。誰かと並んで食べるご飯は美味しさもひとしおです。<br>お酒を一杯、のんびりと過ごすのはいかがでしょうか。
     .table
       h2 テーブル席
-      figure.image02: img(src="../assets/images/table.png", alt="")
+      figure.image02: img(src="../assets/images/table.jpg", alt="")
       p お仲間といらした際は、ぜひテーブル席へ。賑わいの中、卓を囲んで乾杯すれば話に花が咲くはずです。<br>掘りごたつ式なので、足をらくにお食事が楽しめます。
     .single_room
       h2.head03 個室
-      figure.image03_1: img(src="../assets/images/nerima.png", alt="")
-      figure.image03_2: img(src="../assets/images/akakabu.png", alt="")
+      figure.image03_1: img(src="../assets/images/nerima.jpg", alt="")
+      figure.image03_2: img(src="../assets/images/akakabu.jpg", alt="")
       p.text03 だいこん家では３つの個室をご用意しております。落ち着いて過ごせる小さな「赤かぶ」。中くらいの「青くびだいこん」。そして、大人数で起こしいただける「練馬だいこん」です。ご宴会や大切な人とのお食事に、ぜひ個室をご利用ください。
     Tel
     Access

@@ -2,19 +2,19 @@
   main
     .hero
       h1 お料理
-      figure.main: img(src="../assets/images/oryori_main.png", alt="")
-      figure.grad: img(src="../assets/images/oryori_main_grad@2x.png", alt="")
+      figure.main: img(src="../assets/images/oryori_main.jpg", alt="")
+      figure.grad: img(src="../assets/images/oryori_main_grad.png", alt="")
     section.story
       h2.head01#story_anime01 ひとつひとつ丁寧に。
-      figure.img01#story_anime01: img(src="../assets/images/kakuni_making.png", alt="")
+      figure.img01#story_anime01: img(src="../assets/images/kakuni_making.jpg", alt="")
       p.text01#story_anime01 醤油にみりん、お砂糖とお塩にすこしの隠し味を入れて。だいこん家では、店主みずからまいにち時間をかけて料理をお作りしています。美味しかったらぜひ感想をお聞かせください。
       h2.head02#story_anime02 自慢のお酒
-      figure.img02#story_anime02: img(src="../assets/images/nihonsyu.png", alt="")
+      figure.img02#story_anime02: img(src="../assets/images/nihonsyu.jpg", alt="")
       p.text02#story_anime02 福島をはじめとし、全国から20種類を超える日本酒を取り揃えました。ビールや焼酎はもちろん、定番のお酒も豊富にご用意しております。
     .course
       h2 コース
       p.description  宴会の際には、刺し身、煮物、煮魚がそろったお得なコースをどうぞ。
-      figure: img(src="../assets/images/otsukuri.png", alt="")
+      figure: img(src="../assets/images/otsukuri.jpg", alt="")
       .text_box
         p.price  5,500円〜
         p.time  120分 飲み放題込
@@ -25,28 +25,28 @@
       p.description 名物「だいこんと角煮と煮玉子」をはじめとし、福島いわきの美味しい家庭料理を取り揃えました。
       .single_image
         figure
-          figure: img(src="../assets/images/kakuni.png", alt="")
+          figure: img(src="../assets/images/kakuni.jpg", alt="")
           figcaption だいこんと角煮と煮玉子
         figure
-          figure: img(src="../assets/images/koyadofu.png", alt="")
+          figure: img(src="../assets/images/koyadofu.jpg", alt="")
           figcaption 高野豆腐の肉詰め
         figure
-          figure: img(src="../assets/images/mehikari_karaage.png", alt="")
+          figure: img(src="../assets/images/mehikari_karaage.jpg", alt="")
           figcaption めひかりの唐揚げ
         figure
-          figure: img(src="../assets/images/mehikari_hirakiyaki.png", alt="")
+          figure: img(src="../assets/images/mehikari_hirakiyaki.jpg", alt="")
           figcaption めひかりの開き焼き
         figure
-          figure: img(src="../assets/images/gingarei.png", alt="")
+          figure: img(src="../assets/images/gingarei.jpg", alt="")
           figcaption ぎんがれいの煮付け
         figure
-          figure: img(src="../assets/images/toriyaki.png", alt="")
+          figure: img(src="../assets/images/toriyaki.jpg", alt="")
           figcaption 鳥焼き
         figure
-          figure: img(src="../assets/images/misoimo.png", alt="")
+          figure: img(src="../assets/images/misoimo.jpg", alt="")
           figcaption みそいも
         figure
-          figure: img(src="../assets/images/potetosarad.png", alt="")
+          figure: img(src="../assets/images/potetosarad.jpg", alt="")
           figcaption ポテトサラダ
         p 他にもたくさんの料理を<br>ご用意しております。
     Tel

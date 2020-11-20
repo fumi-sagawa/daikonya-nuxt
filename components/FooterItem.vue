@@ -11,7 +11,7 @@ div
     .information
       .tel
         p.caption 電話番号
-        p.main 0246-22-7015
+        p.main: a(href="tel:0246-22-7015") 0246-22-7015
       .address
         p.caption 住所
         p.sub 〒970-8026
