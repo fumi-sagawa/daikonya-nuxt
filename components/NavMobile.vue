@@ -77,6 +77,11 @@ ul{
   padding: 0;
 }
 
+
+a{
+  display: block;
+}
+
 .mobile_navigation img {
   height: auto;
 }
