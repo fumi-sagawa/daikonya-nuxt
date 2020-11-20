@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   //-モバイルナビゲーション
-  button.mobile_menu_button_humbergur(v-on:click="flag = false")
+  button(aria-label="ナビゲーションの切替").mobile_menu_button_humbergur(v-on:click="flag = false")
     span 
     span 
     span 
@@ -10,7 +10,7 @@ div
     .logo_area
       img(src="../assets/images/logo.png", alt="")
       img.logo_type(src="../assets/images/logotype_white.svg", alt="")
-    button.mobile_menu_button#menu-close(v-on:click="flag = true")
+    button(aria-label="ナビゲーションの切替").mobile_menu_button#menu-close(v-on:click="flag = true")
       span.line1 
       span.line2 
     .information_area(v-on:click="flag = true")
@@ -27,7 +27,7 @@ div
           p.caption 住所
           p.sub 〒970-8026
           p.main 福島県いわき市平二町目58-1
-      a.map(href="https://goo.gl/maps/Y9NQDPB925fYudQs6" target="_blank") Googleマップで開く
+      a.map(href="https://goo.gl/maps/Y9NQDPB925fYudQs6" target="_blank" rel="noopener") Googleマップで開く
 </template>
 
 <style scoped>

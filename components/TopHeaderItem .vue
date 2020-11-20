@@ -1,6 +1,6 @@
 <template lang="pug">
 header
-  nuxt-link.logo_area(to="/")
+  nuxt-link.logo_area(to="/" aria-label="ホームに戻る")
     figure.logo: img(src="../assets/images/logo.png", alt="")
     figure.logo_type_black: img(src="../assets/images/logotype_black.svg", alt="")
     figure.logo_type_white: img(src="../assets/images/logotype_white.svg", alt="")
