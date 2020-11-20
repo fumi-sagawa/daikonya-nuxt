@@ -44,10 +44,10 @@ div
   border: none;
   background: none;
   align-content: center;
+  --humburger_color: white;
 }
 .mobile_menu_button_humbergur span {
-  background-color: #343434;
-  background-color: #ffffff;
+  background-color: var(--humburger_color);
   display: block;
   width: 35px;
   height: 1px;
@@ -191,11 +191,40 @@ ul{
 
 
 <script>
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+if (process.client) {
+  gsap.registerPlugin(ScrollTrigger)
+}
+
+
 export default {
   data() {
     return {
       flag: true,
     }
   },
+  mounted() {
+    this.turn_humburger_color()
+    // this.invisible()
+  },
+  methods:{
+    turn_humburger_color(){
+      gsap.to(".mobile_menu_button_humbergur", { // 動かしたい要素は.a
+            // x: 500, // 右方向に500動く
+            "--humburger_color": "#343434",
+            duration: 0.4, // アニメーションは1秒間
+            scrollTrigger: {
+              trigger: ".hero_top", // 要素".a"がビューポートに入ったときにアニメーション開始
+              start: 'bottom-=20px top', // アニメーション開始位置
+              end:  'bottom-=20px top',
+              toggleActions: "play none reverse none",
+              // markers: true
+            }
+          })
+    },
+  }
 }
+
+
 </script>

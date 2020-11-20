@@ -93,6 +93,7 @@ footer .information p.caption {
 footer .information p.main {
   line-height: 1;
   font-size: 34px;
+  color: white;
 }
 @media (min-width: 769px) and (max-width: 1199px) {
   footer .information p.main {
