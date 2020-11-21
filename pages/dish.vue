@@ -7,7 +7,7 @@
     section.story
       h2.head01#story_anime01 ひとつひとつ丁寧に。
       figure.img01#story_anime01: img(src="../assets/images/kakuni_making.jpg", alt="")
-      p.text01#story_anime01 醤油にみりん、お砂糖とお塩にすこしの隠し味を入れて。だいこん家では、店主みずからまいにち時間をかけて料理をお作りしています。美味しかったらぜひ感想をお聞かせください。
+      p.text01#story_anime01 醤油にみりん、お砂糖とお塩にすこしの隠し味を入れて。だいこん家では、店主みずから毎日時間をかけて料理をお作りしています。お口に合えば、ぜひ感想をお聞かせください。
       h2.head02#story_anime02 自慢のお酒
       figure.img02#story_anime02: img(src="../assets/images/nihonsyu.jpg", alt="")
       p.text02#story_anime02 福島をはじめとし、全国から20種類を超える日本酒を取り揃えました。ビールや焼酎はもちろん、定番のお酒も豊富にご用意しております。
