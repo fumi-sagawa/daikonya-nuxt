@@ -45,14 +45,16 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     '@nuxtjs/google-analytics'
-  ],googleAnalytics: {
-    id: 'G-GX8X0R7XES' //自身のアナリティクスコード
+  ],
+  googleAnalytics: {
+    id: 'UA-183642889-1' //自身のアナリティクスコード
   },
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
       '@nuxtjs/sitemap'
-  ],sitemap: {
+  ],
+  sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://daikon-ya.net',
     generate: true,
