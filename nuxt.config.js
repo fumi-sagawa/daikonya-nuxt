@@ -57,7 +57,6 @@ export default {
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://daikon-ya.net',
-    generate: true,
     exclude: ['/404'],
   },
   

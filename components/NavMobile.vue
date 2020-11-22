@@ -1,7 +1,7 @@
 <template lang="pug">
 div
   //-モバイルナビゲーション
-  button(aria-label="ナビゲーションの切替").mobile_menu_button_humbergur(v-on:click="flag = false")
+  button.mobile_menu_button_humbergur(v-on:click="flag = false", aria-label="ナビゲーションの切替")
     span 
     span 
     span 
@@ -10,7 +10,7 @@ div
     .logo_area
       img(src="../assets/images/logo.png", alt="")
       img.logo_type(src="../assets/images/logotype_white.svg", alt="")
-    button(aria-label="ナビゲーションの切替").mobile_menu_button#menu-close(v-on:click="flag = true")
+    button.mobile_menu_button#menu-close(v-on:click="flag = true", aria-label="ナビゲーションの切替")
       span.line1 
       span.line2 
     .information_area(v-on:click="flag = true")
