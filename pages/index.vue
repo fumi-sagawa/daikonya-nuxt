@@ -585,7 +585,7 @@ export default {
             },
             stagger: {
               from: "start", //左側から
-              amount: 0.4 // 0.8秒おきに
+              amount: 0.6 // 0.8秒おきに
             },
           })
     },
