@@ -468,7 +468,7 @@ export default {
             scrollTrigger: {
               trigger: "#story_anime01", // 要素".a"がビューポートに入ったときにアニメーション開始
               start: 'top 80%', // アニメーション開始位置
-              toggleActions: "restart none reverse none",
+              toggleActions: "restart none none reverse",
             }
           })
     },
@@ -482,7 +482,7 @@ export default {
             scrollTrigger: {
               trigger: "#story_anime02", // 要素".a"がビューポートに入ったときにアニメーション開始
               start: 'top 80%', // アニメーション開始位置
-              toggleActions: "restart none reverse none",
+              toggleActions: "restart none none reverse",
             }
           })
     },
