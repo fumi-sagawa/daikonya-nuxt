@@ -50,7 +50,7 @@ main {
   .obento {
       position:  absolute;        /* 要素の配置方法を指定 */
       left:  5vw;                /* 左からの位置指定 */
-      top: 75vh;                  /* 上からの位置指定 */
+      top: 70vh;                  /* 上からの位置指定 */
       width: 150px;
       height: 150px;
   }
