@@ -27,6 +27,9 @@
         nuxt-link(to="room") 詳しく見る
       Tel
       Access
+      .obento
+        a(href="/pdf/daikonya_obento.pdf" download="daikonya_obento.pdf")
+          img(src="../assets/images/obento.svg", alt="")
 </template>
 
 <style scoped>
@@ -34,6 +37,26 @@ main {
   display: grid;
   grid-template-rows: [hero] calc(var(--vh, 1vh) * 100) [gap1] 95px [about] auto [gap2] 246px [dish] auto [gap3] 158px [room] auto [tel_number] auto [access] auto [gap6] 160px;
 }
+
+.obento {
+    position:  absolute;        /* 要素の配置方法を指定 */
+    left:  5vw;                /* 左からの位置指定 */
+    top: 75vh;                  /* 上からの位置指定 */
+    width: 200px;
+    height: 200px;
+}
+
+@media(max-width: 500px){
+  .obento {
+      position:  absolute;        /* 要素の配置方法を指定 */
+      left:  5vw;                /* 左からの位置指定 */
+      top: 75vh;                  /* 上からの位置指定 */
+      width: 150px;
+      height: 150px;
+  }
+}
+
+
 @media (max-width: 767px) {
   main {
     grid-template-rows: [hero] calc(var(--vh, 1vh) * 100) [gap1] 24px [about] auto [gap2] 100px [dish] auto [gap3] 84px [room] auto [gap4] 100px [tel_number] auto [gap5] 100px [access] auto [gap6] 20px;
