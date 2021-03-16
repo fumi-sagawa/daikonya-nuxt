@@ -29,7 +29,7 @@
       Access
       .obento
         a(href="/pdf/daikonya_obento.pdf" download="daikonya_obento.pdf")
-          img(src="../assets/images/obento.svg", alt="")
+          img(src="../assets/images/obento_.svg", alt="")
 </template>
 
 <style scoped>
@@ -44,6 +44,8 @@ main {
     top: 75vh;                  /* 上からの位置指定 */
     width: 200px;
     height: 200px;
+    font-weight: bold;
+    font-family: "Yu Gothic";
 }
 
 @media(max-width: 500px){
