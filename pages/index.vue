@@ -27,9 +27,9 @@
         nuxt-link(to="room") 詳しく見る
       Tel
       Access
-      .obento
-        a(href="/pdf/daikonya_obento.pdf" download="daikonya_obento.pdf")
-          img(src="../assets/images/obento_.svg", alt="")
+      //- .obento
+      //-   a(href="/pdf/daikonya_obento.pdf" download="daikonya_obento.pdf")
+      //-     img(src="../assets/images/obento_.svg", alt="")
 </template>
 
 <style scoped>
@@ -39,25 +39,24 @@ main {
 }
 
 .obento {
-    position:  absolute;        /* 要素の配置方法を指定 */
-    left:  5vw;                /* 左からの位置指定 */
-    top: 75vh;                  /* 上からの位置指定 */
-    width: 200px;
-    height: 200px;
-    font-weight: bold;
-    font-family: "Yu Gothic";
+  position: absolute; /* 要素の配置方法を指定 */
+  left: 5vw; /* 左からの位置指定 */
+  top: 75vh; /* 上からの位置指定 */
+  width: 200px;
+  height: 200px;
+  font-weight: bold;
+  font-family: "Yu Gothic";
 }
 
-@media(max-width: 500px){
+@media (max-width: 500px) {
   .obento {
-      position:  absolute;        /* 要素の配置方法を指定 */
-      left:  5vw;                /* 左からの位置指定 */
-      top: 70vh;                  /* 上からの位置指定 */
-      width: 150px;
-      height: 150px;
+    position: absolute; /* 要素の配置方法を指定 */
+    left: 5vw; /* 左からの位置指定 */
+    top: 70vh; /* 上からの位置指定 */
+    width: 150px;
+    height: 150px;
   }
 }
-
 
 @media (max-width: 767px) {
   main {
@@ -95,7 +94,7 @@ main {
 .hero_top figure {
   pointer-events: none;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   box-sizing: border-box;
 }
 .hero_top .main {
@@ -150,7 +149,7 @@ main {
 .hero_mobile figure {
   pointer-events: none;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   box-sizing: border-box;
 }
 .hero_mobile .main {
@@ -226,7 +225,7 @@ main {
 }
 .about::after {
   content: "";
-  background-color: #F5EDDC;
+  background-color: #f5eddc;
   grid-area: 1/1/6/12;
   margin-top: -300px;
   margin-bottom: 140px;
@@ -265,7 +264,7 @@ main {
   }
   .about::after {
     content: "";
-    background-color: #F5EDDC;
+    background-color: #f5eddc;
     grid-row: 1/-1;
     grid-column: 1/-3;
     z-index: -1;
@@ -342,7 +341,7 @@ main {
 }
 .dish::after {
   content: "";
-  background-color: #F5EDDC;
+  background-color: #f5eddc;
   grid-area: 1/3/7/15;
   margin-top: 72px;
   margin-bottom: -72px;
@@ -397,7 +396,7 @@ main {
   }
   .dish::after {
     content: "";
-    background-color: #F5EDDC;
+    background-color: #f5eddc;
     grid-column: 2/-1;
     grid-row: 1/-1;
     margin-top: 72px;
@@ -500,7 +499,6 @@ main {
   }
 }
 
-
 /* メニューのトグル用 */
 /* .target{
   transition: 0.8s;
@@ -509,112 +507,112 @@ main {
 .visible_invisible{
   opacity: 100%;
 } */
-
-
 </style>
 
 <script>
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 if (process.client) {
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 }
-
-
 
 export default {
-  layout: 'top',
+  layout: "top",
   mounted() {
     // this.logo_white()
-    this.about_noren()
-    this.about_tennai()
-    this.about_text()
-    this.dish_anime01()
-    this.dish_anime02()
+    this.about_noren();
+    this.about_tennai();
+    this.about_text();
+    this.dish_anime01();
+    this.dish_anime02();
   },
-  methods:{
-    about_noren(){
+  methods: {
+    about_noren() {
       gsap.set(".noren", {
-            autoAlpha:0,
-            x: 10
-          });
-      gsap.to(".noren", { // 動かしたい要素は.a
-            // x: 500, // 右方向に500動く
-            x: -10,
-            autoAlpha: 1,
-            duration: 0.8, // アニメーションは1秒間
-            scrollTrigger: {
-              trigger: '.noren', // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: '30% 90%', // アニメーション開始位置
-            }
-          })
+        autoAlpha: 0,
+        x: 10
+      });
+      gsap.to(".noren", {
+        // 動かしたい要素は.a
+        // x: 500, // 右方向に500動く
+        x: -10,
+        autoAlpha: 1,
+        duration: 0.8, // アニメーションは1秒間
+        scrollTrigger: {
+          trigger: ".noren", // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: "30% 90%" // アニメーション開始位置
+        }
+      });
     },
-    about_tennai(){
+    about_tennai() {
       gsap.set(".tennai", {
-            autoAlpha:0,
-            y: 10
-          });
-      gsap.to(".tennai", { // 動かしたい要素は.a
-            // x: 500, // 右方向に500動く
-            y: -10,
-            autoAlpha: 1,
-            duration: 0.8, // アニメーションは1秒間
-            scrollTrigger: {
-              trigger: '.tennai', // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: '30% 90%', // アニメーション開始位置
-            }
-          })
+        autoAlpha: 0,
+        y: 10
+      });
+      gsap.to(".tennai", {
+        // 動かしたい要素は.a
+        // x: 500, // 右方向に500動く
+        y: -10,
+        autoAlpha: 1,
+        duration: 0.8, // アニメーションは1秒間
+        scrollTrigger: {
+          trigger: ".tennai", // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: "30% 90%" // アニメーション開始位置
+        }
+      });
     },
-    about_text(){
+    about_text() {
       gsap.set("#about_anime", {
-            autoAlpha:0,
-          });
-      gsap.to("#about_anime", { // 動かしたい要素は.a
-            autoAlpha: 1,
-            scrollTrigger: {
-              trigger: "#about_anime", // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: 'top center', // アニメーション開始位置
-            },
-            stagger: {
-              from: "start", //左側から
-              amount: 0.6 // 0.8秒おきに
-            },
-          })
+        autoAlpha: 0
+      });
+      gsap.to("#about_anime", {
+        // 動かしたい要素は.a
+        autoAlpha: 1,
+        scrollTrigger: {
+          trigger: "#about_anime", // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: "top center" // アニメーション開始位置
+        },
+        stagger: {
+          from: "start", //左側から
+          amount: 0.6 // 0.8秒おきに
+        }
+      });
     },
-    dish_anime01(){
+    dish_anime01() {
       gsap.set("#dish_anime01", {
-            autoAlpha:0,
-            y: 10
-          });
-      gsap.to("#dish_anime01", { // 動かしたい要素は.a
-            y:-10,
-            autoAlpha: 1,
-            duration: 1, // アニメーションは1秒間
-            scrollTrigger: {
-              trigger: "#dish_anime01", // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: 'top 80%', // アニメーション開始位置
-            },
-          })
+        autoAlpha: 0,
+        y: 10
+      });
+      gsap.to("#dish_anime01", {
+        // 動かしたい要素は.a
+        y: -10,
+        autoAlpha: 1,
+        duration: 1, // アニメーションは1秒間
+        scrollTrigger: {
+          trigger: "#dish_anime01", // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: "top 80%" // アニメーション開始位置
+        }
+      });
     },
-    dish_anime02(){
+    dish_anime02() {
       gsap.set("#dish_anime02", {
-            autoAlpha:0,
-          });
-      gsap.to("#dish_anime02", { // 動かしたい要素は.a
-            // x: 500, // 右方向に500動く
-            autoAlpha: 1,
-            duration: 1, // アニメーションは1秒間
-            scrollTrigger: {
-              trigger: "#dish_anime02", // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: 'top 70%', // アニメーション開始位置
-            },
-            stagger: {
-              from: "start", //左側から
-              amount: 0.6 // 0.8秒おきに
-            },
-          })
-    },
-
+        autoAlpha: 0
+      });
+      gsap.to("#dish_anime02", {
+        // 動かしたい要素は.a
+        // x: 500, // 右方向に500動く
+        autoAlpha: 1,
+        duration: 1, // アニメーションは1秒間
+        scrollTrigger: {
+          trigger: "#dish_anime02", // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: "top 70%" // アニメーション開始位置
+        },
+        stagger: {
+          from: "start", //左側から
+          amount: 0.6 // 0.8秒おきに
+        }
+      });
+    }
   }
-}
+};
 </script>
