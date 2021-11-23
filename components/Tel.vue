@@ -4,6 +4,7 @@
     p.res_anounce ご予約はこちらから
     p.number: a(href="tel:0246-22-7015") 0246-22-7015
     p.time 営業時間：午後５時 ~ 午後１１時
+    p.time 各種クレジットカードをお使いいただけます。
 </template>
 
 <style scoped>
@@ -37,14 +38,14 @@
   font-size: 82px;
   letter-spacing: 0.5rem;
   line-height: 1.43;
-  border-bottom: 10px double #E6DDC3;
+  border-bottom: 10px double #e6ddc3;
   transition: 0.4s;
 }
 .tel_number .number a {
   color: #343434;
 }
 .tel_number .number:hover {
-  border-bottom: 10px double #988C79;
+  border-bottom: 10px double #988c79;
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .tel_number .number {
