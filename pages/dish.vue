@@ -14,7 +14,7 @@
     .course
       h2 コース
       p.description  宴会の際には、刺し身、煮物、煮魚がそろったお得なコースをどうぞ。
-      figure: img(src="../assets/images/otsukuri.jpg", alt="")
+      figure: img(src="../assets/images/otsukuri_2.jpg", alt="")
       .text_box
         p.price  5,500円〜
         p.time  120分 飲み放題込
@@ -29,7 +29,7 @@
           figcaption だいこんと角煮と煮玉子
         figure
           figure: img(src="../assets/images/koyadofu.jpg", alt="")
-          figcaption 高野豆腐の肉詰め
+          figcaption 腕もの
         figure
           figure: img(src="../assets/images/mehikari_karaage.jpg", alt="")
           figcaption めひかりの唐揚げ
@@ -97,7 +97,7 @@ main {
 .hero figure {
   pointer-events: none;
   -webkit-user-select: none;
-          user-select: none;
+  user-select: none;
   box-sizing: border-box;
 }
 .hero .main {
@@ -440,53 +440,51 @@ main {
     font-size: 12px;
   }
 }
-
 </style>
 
 <script>
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 if (process.client) {
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 }
-
-
 
 export default {
   mounted() {
-    this.story_anime01()
-    this.story_anime02()
+    this.story_anime01();
+    this.story_anime02();
   },
-  methods:{
-    story_anime01(){
+  methods: {
+    story_anime01() {
       gsap.set("#story_anime01", {
-            autoAlpha:0,
-          });
-      gsap.to("#story_anime01", { // 動かしたい要素は.a
-            autoAlpha: 1,
-            duration: 1, // アニメーションは1秒間
-            scrollTrigger: {
-              trigger: "#story_anime01", // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: 'top 80%', // アニメーション開始位置
-              toggleActions: "restart none none reverse",
-            }
-          })
+        autoAlpha: 0,
+      });
+      gsap.to("#story_anime01", {
+        // 動かしたい要素は.a
+        autoAlpha: 1,
+        duration: 1, // アニメーションは1秒間
+        scrollTrigger: {
+          trigger: "#story_anime01", // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: "top 80%", // アニメーション開始位置
+          toggleActions: "restart none none reverse",
+        },
+      });
     },
-    story_anime02(){
+    story_anime02() {
       gsap.set("#story_anime02", {
-            autoAlpha:0,
-          });
-      gsap.to("#story_anime02", { // 動かしたい要素は.a
-            autoAlpha: 1,
-            duration: 1, // アニメーションは1秒間
-            scrollTrigger: {
-              trigger: "#story_anime02", // 要素".a"がビューポートに入ったときにアニメーション開始
-              start: 'top 80%', // アニメーション開始位置
-              toggleActions: "restart none none reverse",
-            }
-          })
+        autoAlpha: 0,
+      });
+      gsap.to("#story_anime02", {
+        // 動かしたい要素は.a
+        autoAlpha: 1,
+        duration: 1, // アニメーションは1秒間
+        scrollTrigger: {
+          trigger: "#story_anime02", // 要素".a"がビューポートに入ったときにアニメーション開始
+          start: "top 80%", // アニメーション開始位置
+          toggleActions: "restart none none reverse",
+        },
+      });
     },
-  }
-}
+  },
+};
 </script>
-
