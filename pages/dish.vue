@@ -18,7 +18,7 @@
       .text_box
         p.price  5,500円〜
         p.time  120分 飲み放題込
-        p.menu 前菜三種盛り<br>サラダ<br>高野豆腐の肉詰め<br>お刺身<br>煮魚<br>だいこんと角煮と煮玉子<br>あげもの盛り合わせ<br>デザート
+        p.menu 前菜三種盛り<br>サラダ<br>腕物<br>お刺身<br>煮魚<br>だいこんと角煮と煮玉子<br>揚げ物盛り合わせ<br>デザート
         p.caution ※ 料理、また写真は一例です。
     .single_menu
       h2 単品のお料理
@@ -29,7 +29,7 @@
           figcaption だいこんと角煮と煮玉子
         figure
           figure: img(src="../assets/images/koyadofu.jpg", alt="")
-          figcaption 腕もの
+          figcaption 高野豆腐の肉詰め
         figure
           figure: img(src="../assets/images/mehikari_karaage.jpg", alt="")
           figcaption めひかりの唐揚げ
