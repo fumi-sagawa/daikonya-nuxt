@@ -16,7 +16,7 @@
       p.description  宴会の際には、刺し身、煮物、煮魚がそろったお得なコースをどうぞ。
       figure: img(src="../assets/images/otsukuri_2.jpg", alt="")
       .text_box
-        p.price  5,500円〜
+        p.price  6,000円〜
         p.time  120分 飲み放題込
         p.menu 前菜三種盛り<br>サラダ<br>腕物<br>お刺身<br>煮魚<br>だいこんと角煮と煮玉子<br>揚げ物盛り合わせ<br>デザート
         p.caution ※ 料理、また写真は一例です。
