@@ -1,32 +1,33 @@
 <template lang="pug">
-    main
-      .hero_top
-        h1: figure.catch: img(src="../assets/images/catch_white.svg", alt="")
-        figure.main: img(src="../assets/images/top_main.jpg", alt="")
-        figure.grad: img(src="../assets/images/top_main_grad.png", alt="")
-      .hero_mobile
-        .heading1: figure.catch: img(src="../assets/images/catch__white_mobile.svg", alt="")
-        figure.main: img(src="../assets/images/top_main_mobile.jpg", alt="")
-        figure.grad: img(src="../assets/images/top_main_mobile_grad.png", alt="")
-      .about
-        figure.noren: img(src="../assets/images/noren.jpg", alt="")
-        figure.tennai: img(src="../assets/images/tennai.jpg", alt="")
-        h2#about_anime 台所から、<br>腕によりをかけて
-        p#about_anime 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早25年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
-      .dish
-        h2#dish_anime01 家庭の味を、<br>美味しいお酒と一緒に
-        figure.kakuni#dish_anime01: img(src="../assets/images/kakuni_top.jpg", alt="")
-        p#dish_anime01 甘さが溶け出てお口にじゅわっと広がる、<br>たれが染み込んだ大根とお肉。<br>みずみずしくて脂がのった、<br>その日捌いた新鮮な刺身。<br>あてに一杯お酒をやれば、<br>自然とため息がこぼれ出ます。
-        nuxt-link#dish_anime01(to="dish") 詳しく見る
-        figure.koyadofu#dish_anime02: img(src="../assets/images/koyadofu_top.jpg", alt="")
-        figure.sashimi#dish_anime02: img(src="../assets/images/sashimi_top.jpg", alt="")
-      .room
-        h2 おひとりさまでも、<br>大勢でもどうぞ
-        figure: img(src="../assets/images/table_top.jpg", alt="")
-        p カウンターやテーブル、個室と多様なお部屋をご用意しています。少し大きなお部屋もありますので、宴会などにどうぞ。
-        nuxt-link(to="room") 詳しく見る
-      Tel
-      Access
+main
+  .hero_top
+    h1: figure.catch: img(src="../assets/images/catch_white.svg", alt="")
+    figure.main: img(src="../assets/images/top_main.jpg", alt="")
+    figure.grad: img(src="../assets/images/top_main_grad.png", alt="")
+  .hero_mobile
+    .heading1: figure.catch: img(src="../assets/images/catch__white_mobile.svg", alt="")
+    figure.main: img(src="../assets/images/top_main_mobile.jpg", alt="")
+    figure.grad: img(src="../assets/images/top_main_mobile_grad.png", alt="")
+  .about
+    .offday: div.inner <span class="title">今月の店休日</span><br>9/3(日), 9/10(日), 9/17(日), 9/18(土), 9/23(日), 9/24(日)
+    figure.noren: img(src="../assets/images/noren.jpg", alt="")
+    figure.tennai: img(src="../assets/images/tennai.jpg", alt="")
+    h2#about_anime 台所から、<br>腕によりをかけて
+    p#about_anime 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早25年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
+  .dish
+    h2#dish_anime01 家庭の味を、<br>美味しいお酒と一緒に
+    figure.kakuni#dish_anime01: img(src="../assets/images/kakuni_top.jpg", alt="")
+    p#dish_anime01 甘さが溶け出てお口にじゅわっと広がる、<br>たれが染み込んだ大根とお肉。<br>みずみずしくて脂がのった、<br>その日捌いた新鮮な刺身。<br>あてに一杯お酒をやれば、<br>自然とため息がこぼれ出ます。
+    nuxt-link#dish_anime01(to="dish") 詳しく見る
+    figure.koyadofu#dish_anime02: img(src="../assets/images/koyadofu_top.jpg", alt="")
+    figure.sashimi#dish_anime02: img(src="../assets/images/sashimi_top.jpg", alt="")
+  .room
+    h2 おひとりさまでも、<br>大勢でもどうぞ
+    figure: img(src="../assets/images/table_top.jpg", alt="")
+    p カウンターやテーブル、個室と多様なお部屋をご用意しています。少し大きなお部屋もありますので、宴会などにどうぞ。
+    nuxt-link(to="room") 詳しく見る
+  Tel
+  Access
       //- .obento
       //-   a(href="/pdf/daikonya_obento.pdf" download="daikonya_obento.pdf")
       //-     img(src="../assets/images/obento_.svg", alt="")
@@ -36,16 +37,6 @@
 main {
   display: grid;
   grid-template-rows: [hero] calc(var(--vh, 1vh) * 100) [gap1] 95px [about] auto [gap2] 246px [dish] auto [gap3] 158px [room] auto [tel_number] auto [access] auto [gap6] 160px;
-}
-
-.obento {
-  position: absolute; /* 要素の配置方法を指定 */
-  left: 5vw; /* 左からの位置指定 */
-  top: 75vh; /* 上からの位置指定 */
-  width: 200px;
-  height: 200px;
-  font-weight: bold;
-  font-family: "Yu Gothic";
 }
 
 @media (max-width: 500px) {
@@ -206,6 +197,25 @@ main {
 .about .noren {
   grid-area: 1/9/3/14;
 }
+.about .offday {
+  margin-top: -68px;
+  grid-area: 1/2/2/7;
+  align-content: start;
+  display: grid;
+}
+.offday .inner {
+  padding: 24px;
+  background: white;
+  border: 1px solid rgba(22, 22, 22, 0.53);
+  font-size: 18px;
+  .title {
+    font-size: 22px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 8px;
+  }
+}
+
 .about .noren img {
   object-fit: cover;
 }
@@ -270,6 +280,23 @@ main {
     z-index: -1;
     margin-right: 10px;
     margin-bottom: 100px;
+  }
+
+  .about .offday {
+    margin-top: -128px;
+    grid-area: 1/1/2/5;
+    align-content: start;
+    display: grid;
+  }
+  .offday .inner {
+    padding: 20px;
+    background: white;
+    border: 1px solid rgba(22, 22, 22, 0.53);
+    border-left: none;
+    font-size: 14px;
+    .title {
+      font-size: 16px;
+    }
   }
 }
 
@@ -530,7 +557,7 @@ export default {
     about_noren() {
       gsap.set(".noren", {
         autoAlpha: 0,
-        x: 10
+        x: 10,
       });
       gsap.to(".noren", {
         // 動かしたい要素は.a
@@ -540,14 +567,14 @@ export default {
         duration: 0.8, // アニメーションは1秒間
         scrollTrigger: {
           trigger: ".noren", // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: "30% 90%" // アニメーション開始位置
-        }
+          start: "30% 90%", // アニメーション開始位置
+        },
       });
     },
     about_tennai() {
       gsap.set(".tennai", {
         autoAlpha: 0,
-        y: 10
+        y: 10,
       });
       gsap.to(".tennai", {
         // 動かしたい要素は.a
@@ -557,31 +584,31 @@ export default {
         duration: 0.8, // アニメーションは1秒間
         scrollTrigger: {
           trigger: ".tennai", // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: "30% 90%" // アニメーション開始位置
-        }
+          start: "30% 90%", // アニメーション開始位置
+        },
       });
     },
     about_text() {
       gsap.set("#about_anime", {
-        autoAlpha: 0
+        autoAlpha: 0,
       });
       gsap.to("#about_anime", {
         // 動かしたい要素は.a
         autoAlpha: 1,
         scrollTrigger: {
           trigger: "#about_anime", // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: "top center" // アニメーション開始位置
+          start: "top center", // アニメーション開始位置
         },
         stagger: {
           from: "start", //左側から
-          amount: 0.6 // 0.8秒おきに
-        }
+          amount: 0.6, // 0.8秒おきに
+        },
       });
     },
     dish_anime01() {
       gsap.set("#dish_anime01", {
         autoAlpha: 0,
-        y: 10
+        y: 10,
       });
       gsap.to("#dish_anime01", {
         // 動かしたい要素は.a
@@ -590,13 +617,13 @@ export default {
         duration: 1, // アニメーションは1秒間
         scrollTrigger: {
           trigger: "#dish_anime01", // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: "top 80%" // アニメーション開始位置
-        }
+          start: "top 80%", // アニメーション開始位置
+        },
       });
     },
     dish_anime02() {
       gsap.set("#dish_anime02", {
-        autoAlpha: 0
+        autoAlpha: 0,
       });
       gsap.to("#dish_anime02", {
         // 動かしたい要素は.a
@@ -605,14 +632,14 @@ export default {
         duration: 1, // アニメーションは1秒間
         scrollTrigger: {
           trigger: "#dish_anime02", // 要素".a"がビューポートに入ったときにアニメーション開始
-          start: "top 70%" // アニメーション開始位置
+          start: "top 70%", // アニメーション開始位置
         },
         stagger: {
           from: "start", //左側から
-          amount: 0.6 // 0.8秒おきに
-        }
+          amount: 0.6, // 0.8秒おきに
+        },
       });
-    }
-  }
+    },
+  },
 };
 </script>
