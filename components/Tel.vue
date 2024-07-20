@@ -3,7 +3,7 @@
   .text_box
     p.res_anounce ご予約はこちらから
     p.number: a(href="tel:0246-22-7015") 0246-22-7015
-    p.time 営業時間：午後５時 ~ 午後１１時
+    p.time 営業時間：17:00 ~ 22:30 (L.O. 22:00)
     p.time 各種クレジットカードをお使いいただけます。
 </template>
 
