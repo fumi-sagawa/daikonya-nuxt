@@ -9,7 +9,7 @@ main
     figure.main: img(src="../assets/images/top_main_mobile.jpg", alt="")
     figure.grad: img(src="../assets/images/top_main_mobile_grad.png", alt="")
   .about
-    .offday: div.inner <span class="title">今月の店休日</span><br>2/2(日), 2/9(日), 2/11(火), 2/16(日), 2/24(月)
+    .offday: div.inner <span class="title">今月の店休日</span><br>3/2(日), 3/3(月), 3/9(日), 3/16(日), 3/20(木), 3/23(日), 3/30(日)
     figure.noren: img(src="../assets/images/noren.jpg", alt="")
     figure.tennai: img(src="../assets/images/tennai.jpg", alt="")
     h2#about_anime 台所から、<br>腕によりをかけて
