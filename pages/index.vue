@@ -9,7 +9,7 @@ main
     figure.main: img(src="../assets/images/top_main_mobile.jpg", alt="")
     figure.grad: img(src="../assets/images/top_main_mobile_grad.png", alt="")
   .about
-    .offday: div.inner <span class="title">今月の店休日</span><br>12/1(月),  12/7(日),  12/14(日),  12/21(日),  12/28日(日),  12/31日(水) <br>新年は2日から営業致します。
+    .offday: div.inner <span class="title">今月の店休日</span><br>1/1(月), 1/4(日), 1/11(日), 1/12(月), 1/18(日), 1/25(日) <br>新年は2日から営業致します。
 
     figure.noren: img(src="../assets/images/noren.jpg", alt="")
     figure.tennai: img(src="../assets/images/tennai.jpg", alt="")
