@@ -14,7 +14,7 @@
         td 日曜日、他
       tr
         th 今月の店休日
-        td 1/1(月), 1/4(日), 1/11(日), 1/12(月), 1/18(日), 1/25(日) <br>新年は2日から営業致します。
+        td 2/1(日), 2/8(日), 2/11(水), 2/15(日), 2/23(月)
  
     a(href="https://goo.gl/maps/Y9NQDPB925fYudQs6" target="_blank" rel="noopener") Googleマップで開く
   iframe(title="だいこん家への地図" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3184.1017793851443!2d140.88935581577766!3d37.05505767989686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x602110f9935ca771%3A0xd0a9fa3f27cf23e3!2z44Gg44GE44GT44KT5a62!5e0!3m2!1sja!2sjp!4v1605590438247!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
