@@ -14,7 +14,7 @@ main
     figure.noren: img(src="../assets/images/noren.jpg", alt="")
     figure.tennai: img(src="../assets/images/tennai.jpg", alt="")
     h2#about_anime 台所から、<br>腕によりをかけて
-    p#about_anime 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早25年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
+    p#about_anime 「だいこん役者のような、取り柄のない自分でも誰かを笑顔にできないだろうか」<br>そんな思いからお店をはじめ早30年が経ちました。<br>日が沈んで、年が明けて時代が変わっても、好きだった、あの懐かしい味は変わりません。<br>特別な料理じゃないからこそ精一杯腕をふるって。<br>従業員一同、身も心も、ほっと暖かくなる時間をお届けします。　
   .dish
     h2#dish_anime01 家庭の味を、<br>美味しいお酒と一緒に
     figure.kakuni#dish_anime01: img(src="../assets/images/kakuni_top.jpg", alt="")
