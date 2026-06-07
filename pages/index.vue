@@ -9,7 +9,7 @@ main
     figure.main: img(src="../assets/images/top_main_mobile.jpg", alt="")
     figure.grad: img(src="../assets/images/top_main_mobile_grad.png", alt="")
   .about
-    .offday: div.inner <span class="title">今月の店休日</span><br>5/5(火), 5/6(水), 5/10(日), 5/17(日), 5/24(日), 5/31(日)
+    .offday: div.inner <span class="title">今月の店休日</span><br>6/7(日), 6/8(月), 6/14(日), 6/21(日), 6/28(日)
 
     figure.noren: img(src="../assets/images/noren.jpg", alt="")
     figure.tennai: img(src="../assets/images/tennai.jpg", alt="")
